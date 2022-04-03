@@ -1,18 +1,189 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 달타냥입니다.</title>
+    <title> About 사장이 </title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/3cc94f47d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav>
-    <a href="/blog/">Blog</a>
-    <a href="/about_me/">About Me</a>
-</nav>
 
-<h1>안녕하세요, 달타냥입니다.</h1>
-<h2>이력</h2>
-<h2>Portfolio</h2>
-<h3>아직 공사중입니다.</h3>
+{% include 'blog/navbar.html' %}
+
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>안녕하세요. 사장이입니다.</h1>
+                <br/>
+                <p class="lead">
+                    놀고 먹고 자는 것을 좋아합니다.<br/>
+                    실컷 자다가 놀고 싶으면 가족들에게 다가가요.
+                </p>
+
+                <ul>
+                    <li>BIOGRAPHY</li>
+                    <ul>
+                        <li>사장이가 집에 찾아온 날 (2018.5.30 ~)</li>
+                    </ul>
+                    <li>Position in Home</li>
+                    <ul>
+                        <li>CEO, 귀여움과 이쁨 담당(Cute&Beauty be in charge), 홈스윗홈(2018.5.30~)</li>
+                    </ul>
+                    <li>Employees</li>
+                    <ul>
+                        <li>4 human butlers</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/sajang.jpg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#coffee">
+                    <img class="card-img-top" src="{% static 'single_pages/images/coffeecat.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">직원 복지 1 [홈스윗홈.corp]</h5>
+                        <p>사장이를 위하여 열과 성을 다하여 애쓰는 직원을 위하여 사장님이 직접 원두를 갈아주십니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#sleep">
+                    <img class="card-img-top" src="{% static 'single_pages/images/sleepcat.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">직원 복지 2 [홈스윗홈.corp]</h5>
+                        <p>파근무 효율 증진을 위하여 낮잠을 권장하며, 눈치보지 않게 사장님이 먼저 낮잠을 잡니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#wink">
+                    <img class="card-img-top" src="{% static 'single_pages/images/wink.jpg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">직원 복지 3 [홈스윗홈.corp]</h5>
+                        <p>직원의 사기 진작을 위하여 사장님이 직접 귀여운 표정을 지어주십니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="coffee" tabindex="-1" role="dialog" aria-labelledby="coffeecatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="coffeecatModalLabel">직원 복지 1 [홈스윗홈.corp]</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/coffeecat.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>사장이를 위하여 열과 성을 다하여 애쓰는 직원을 위하여 사장님이 직접 원두를 갈아주십니다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 자세히... </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sleep" tabindex="-1" role="dialog" aria-labelledby="sleepcatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sleepcatModalLabel">직원 복지 2 [홈스윗홈.corp]</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/sleepcat.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>근무 효율 증진을 위하여 낮잠을 권장하며, 눈치보지 않게 사장님이 먼저 낮잠을 잡니다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 자세히... </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="wink" tabindex="-1" role="dialog" aria-labelledby="winkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="winkModalLabel">직원 복지 3 [홈스윗홈.corp]</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/wink.jpg' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>직원의 사기 진작을 위하여 사장님이 직접 귀여운 표정을 지어주십니다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 자세히... </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
 </body>
 </html>
